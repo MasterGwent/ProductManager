@@ -17,27 +17,27 @@
 
 .modal-header-buttons {
     display: flex;
-    gap: 2px; /* Это свойство устанавливает расстояние между элементами внутри flex-контейнера */
-    align-items: center; /* Выравнивание кнопок по центру относительно заголовка */
-    margin-left: auto; /* Это оттолкнёт кнопки к правому краю */
+    gap: 2px;
+    align-items: center;
+    margin-left: auto;
 }
 
 .modal-body p {
-    margin-bottom: 10px; /* Регулируйте отступ между параграфами */
-    white-space: nowrap; /* Это предотвратит перенос текста на новую строку */
-    overflow: hidden; /* Скроет текст, выходящий за пределы элемента */
-    text-overflow: ellipsis; /* Добавит многоточие, если текст не умещается */
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn-edit, .btn-delete, .close {
-    margin-left: 0; /* уменьшаем расстояние между кнопками */
-    padding: 0.25rem 0.5rem; /* уменьшаем внутренние отступы */
-    border-radius: 0.25rem; /* уменьшаем радиус скругления */
+    margin-left: 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .btn-edit svg, .btn-delete svg {
-    width: 23px !important; /* уменьшенный размер */
-    height: 23px !important; /* уменьшенный размер */
+    width: 23px !important;
+    height: 23px !important;
 }
 
 .user-name {
@@ -46,170 +46,180 @@
 }
 
 .btn-primary {
-    background-color: #00BFFF; /* Светло-синий цвет фона */
-    border: none; /* Удалить границу */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 10px 50px; /* Внутренние отступы */
-    font-size: 16px; /* Размер шрифта */
-    color: white; /* Цвет текста */
-    text-shadow: none; /* Удалить тень текста, если она есть */
-    box-shadow: none; /* Удалить тень кнопки, если она есть */
+    background-color: #00BFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 16px;
+    color: white;
+    text-shadow: none;
+    box-shadow: none;
 }
 
 .modal-header-buttons .btn {
-    padding: 0.25rem; /* Уменьшение отступов кнопок */
-    margin: 0 2px; /* Уменьшение расстояния между кнопками */
+    padding: 0.25rem;
+    margin: 0 2px;
 }
 
 .modal-header-buttons .btn svg {
-    width: 1em; /* Подстройте размер иконки, если нужно */
-    height: 1em; /* Подстройте размер иконки, если нужно */
+    width: 1em;
+    height: 1em;
 }
 
-/* Удаление пространства слева от кнопки закрыть */
 .modal-header .close {
-    padding: 0.5rem; /* Подстройте отступы, если нужно */
-    margin-left: 2px; /* Уменьшение пространства слева от кнопки закрыть */
-    margin-right: -2px; /* "Подтягивание" кнопки закрыть влево, если нужно */
+    padding: 0.5rem;
+    margin-left: 2px;
+    margin-right: -2px;
 }
 
-/* Примените это, если вам нужно сблизить группу кнопок и крестик */
 .modal-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Это должно оставаться так для правильного выравнивания кнопок и заголовка */
+    justify-content: space-between;
 }
 
 .btn-custom {
     background-color: white;
     color: red;
-    border: none; /* Убрать границу */
-    border-radius: 4px; /* Слегка закруглить углы */
-    padding: 10px 20px; /* Подобрать внутренние отступы */
-    font-size: 20px; /* Увеличенный размер шрифта */
-    text-transform: uppercase; /* Текст заглавными буквами */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 1px; /* Расстояние между буквами */
-    box-shadow: none; /* Убрать тень */
-    transition: background-color 0.2s, box-shadow 0.2s; /* Плавный переход цвета и тени */
+    letter-spacing: 1px;
+    box-shadow: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .your-element-class {
-    position: relative; /* Необходимо для позиционирования псевдоэлемента */
+    position: relative;
 }
 
 .your-element-class::after {
-    content: ''; /* Псевдоэлементы требуют свойства content */
-    position: absolute; /* Позиционируем относительно элемента */
-    bottom: -10px; /* Настройте это значение в зависимости от высоты подчёркивания */
+    content: '';
+    position: absolute;
+    bottom: -10px;
     left: 0;
-    width: 100%; /* Ширина подчёркивания */
-    height: 4px; /* Высота подчёркивания */
-    background-color: #ED1C24; /* Цвет подчёркивания */
+    width: 100%;
+    height: 4px;
+    background-color: #ED1C24;
 }
 
 .thead-light th {
-    background-color: #F2F6FA; /* Светло-серый фон, как на фотографии */
-    color: #333; /* Темно-серый цвет текста */
+    background-color: #F2F6FA;
+    color: #333;
     font-weight: 300;
 }
 
 .table tbody tr td {
-    background-color: #FFFFFF; /* Белый фон для значений */
-    color: #333; /* Темно-серый цвет текста, если нужно */
-    /* Другие стили для ячеек таблицы */
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+#table1 th {
+    background-color: #374050;
+    color: #ffffff;
+}
+
+#table1 td {
+    background-color: #374050;
+    color: #ffffff;
+}
+
+#table1, #table1 th, #table1 td {
+    border: none;
+    font-weight: 300;
+    width: 124px;
 }
 
 .close {
-    padding: 0.5rem 0.5rem; /* Согласовываем отступы с другими кнопками */
-    font-size: 40px; /* Размер крестика, если необходимо */
-    margin-left: 5px; /* Дополнительное пространство слева от крестика */
+    padding: 0.5rem 0.5rem;
+    font-size: 40px;
+    margin-left: 5px;
     font-weight: 200;
 }
 
 .modal-content {
-    background-color: #374050; /* Темно-серый цвет фона */
+    background-color: #374050;
     color: white;
 }
 
-/* Чтобы текст и все элементы внутри были читаемы, возможно, вам понадобится изменить их цвета */
 .modal-content .modal-header,
 .modal-content .modal-body,
 .modal-content .modal-footer {
-    border-color: #495057; /* Цвет границы в соответствии с вашим дизайном */
+    border-color: #495057;
 }
 
-/* Если нужно изменить только текстовые поля и выпадающие списки, а не все кнопки и заголовки */
 .modal-content .form-control {
-    width: 75%; /* Задаем ширину элементам формы 75% от ширины родительского элемента */
-    margin: 0 auto; /* Автоматические отступы для выравнивания по центру */
-    display: block; /* Блочное отображение для применения ширины и авто-отступов */
+    width: 75%;
+    margin: 0 auto;
+    display: block;
 }
 
 .modal-content .modal-header .close {
-    color: white; /* Цвет кнопки закрыть */
+    color: white;
 }
 
 .modal-content .modal-header {
-    border-bottom: 1px solid #626f7f; /* Граница заголовка, если требуется */
+    border-bottom: 1px solid #626f7f;
 }
 
 .modal-content .modal-footer .btn-secondary {
-    background-color: #626f7f; /* Светлее для кнопки "Отмена" */
+    background-color: #626f7f;
     border-color: #626f7f;
 }
 
 .modal-content .modal-footer .btn-primary {
-    background-color: #0FC5FF; /* Цвет для кнопки "Добавить" */
+    background-color: #0FC5FF;
     border-color: #0FC5FF;
 }
 
 .modal-dialog {
-    max-width: 1000px; /* Или любая другая ширина, которую вы хотите установить */
+    max-width: 1000px;
 }
 
 .modal-content .form-group {
-    margin-right: 0; /* Убрать отступы справа у группы формы, если они есть */
-    margin-left: 0; /* Убрать отступы слева у группы формы, если они есть */
-    padding-right: 200px; /* Добавить немного внутреннего отступа справа, если это необходимо */
-    padding-left: 15px; /* Добавить немного внутреннего отступа слева, если это необходимо */
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 200px;
+    padding-left: 15px;
 }
 
 .modal-content .form-control {
-    width: 100%; /* Заставляет элементы формы занимать 100% ширины их родительского элемента .form-group */
-    box-sizing: border-box; /* Убедитесь, что padding не влияет на общую ширину элементов */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
 .modal-footer {
-    border-top: none; /* Убирает границу вверху футера модального окна */
+    border-top: none;
     display: flex;
     justify-content: start;
 }
 
 #add-attribute {
-    color: #17a2b8; /* Цвет текста */
-    text-decoration: underline dotted; /* Подчёркивание текста пунктирной линией */
-    border: none; /* Убрать рамку */
-    background: none; /* Убрать фон */
-    padding: 0; /* Убрать отступы */
-    font-size: 1rem; /* Размер шрифта */
-    cursor: pointer; /* Курсор в виде указателя */
+    color: #17a2b8;
+    text-decoration: underline dotted;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-/* При наведении курсора мыши кнопка будет становиться ещё более светлой */
 #add-attribute:hover {
     color: #63c2de;
 }
 
 #add-attribute-edit {
-    color: #17a2b8; /* Цвет текста */
-    text-decoration: underline dotted; /* Подчёркивание текста пунктирной линией */
-    border: none; /* Убрать рамку */
-    background: none; /* Убрать фон */
-    padding: 0; /* Убрать отступы */
-    font-size: 1rem; /* Размер шрифта */
-    cursor: pointer; /* Курсор в виде указателя */
+    color: #17a2b8;
+    text-decoration: underline dotted;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 #add-attribute-edit:hover {
@@ -220,13 +230,12 @@
     background: none;
     border: none;
     padding: 0;
-    margin-left: 10px; /* Отступ, чтобы отделить кнопку от поля ввода */
-    color: #dc3545; /* Цвет иконки для удаления */
+    margin-left: 10px;
+    color: #dc3545;
 }
 
-/* Добавьте эти стили для корректного выравнивания иконки */
 .remove-attribute svg {
     cursor: pointer;
-    width: 1em; /* Размер иконки */
-    height: 1em; /* Размер иконки */
+    width: 1em;
+    height: 1em;
 }

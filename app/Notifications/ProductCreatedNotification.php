@@ -12,22 +12,28 @@ class ProductCreatedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    public $product;
+    public Product $product;
 
     public function __construct(Product $product)
     {
         $this->product = $product;
     }
 
-    public function via($notifiable)
+    /**
+     * @return string[]
+     */
+    public function via(): array
     {
         return ['mail'];
     }
 
-    public function toMail($notifiable)
+    /**
+     * @return MailMessage
+     */
+    public function toMail(): MailMessage
     {
         return (new MailMessage)
             ->subject('Новый продукт создан')
-            ->line('Продукт с названием: '.$this->product->name.' был создан.');
+            ->line('Продукт с названием: ' . $this->product->name . ' был создан.');
     }
 }

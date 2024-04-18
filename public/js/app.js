@@ -1,4 +1,4 @@
-    $(document).ready(function () {
+$(document).ready(function () {
     $('.clickable-row').on('click', function () {
         let id = $(this).data('id');
         let name = $(this).data('name');
@@ -19,7 +19,6 @@
         $('#modalStatus').text(status);
         $('#productModalLabel').text(name);
 
-        // Подготавливаем форму редактирования с данными
         $('#editProductForm #editName').val(name);
         $('#editProductForm #editArticle').val(article);
         $('#editProductForm #editStatus').val(status);
@@ -31,50 +30,44 @@
             html += getPreparedAttrsHtml(index, element);
         });
 
-
         $('#attributes-container-edit').html(`<br><h5>Атрибуты<br></h5>` + html);
 
-
-        // При нажатии кнопки "Редактировать" устанавливаем данные для модального окна редактирования
         $('.btn-edit').data('id', id);
         $('.btn-delete').data('id', id);
     });
 
-    // При нажатии на кнопку "Добавить атрибут"
     $('#add-attribute').on('click', function () {
-    let $container = $('#attributes-container');
-    let attributesCount = $container.children('.attribute').length;
+        let $container = $('#attributes-container');
+        let attributesCount = $container.children('.attribute').length;
 
-    let $attribute = $(getPreparedAttrsHtml(attributesCount));
-    $container.append($attribute);
-});
+        let $attribute = $(getPreparedAttrsHtml(attributesCount));
+        $container.append($attribute);
+    });
 
     $('#add-attribute-edit').on('click', function () {
-    let $container = $('#attributes-container-edit');
-    let attributesCount = $container.children('.attribute').length;
+        let $container = $('#attributes-container-edit');
+        let attributesCount = $container.children('.attribute').length;
 
-    let $attribute = $(getPreparedAttrsHtml(attributesCount));
-
-
-    $container.append($attribute);
-});
+        let $attribute = $(getPreparedAttrsHtml(attributesCount));
 
 
-    // Обработчик для удаления атрибута
+        $container.append($attribute);
+    });
+
+
     $(document).on('click', '.remove-attribute', function () {
-    $(this).closest('.attribute').remove();
-});
+        $(this).closest('.attribute').remove();
+    });
 
-    // Обработка формы удаления продукта
     $(document).on('click', '.btn-delete', function () {
-    let id = $(this).data('id');
-    if (confirm('Вы уверены, что хотите удалить этот продукт?')) {
-    $('#deleteProductForm').attr('action', '/products/' + id).submit();
-}
-});
+        let id = $(this).data('id');
+        if (confirm('Вы уверены, что хотите удалить этот продукт?')) {
+            $('#deleteProductForm').attr('action', '/products/' + id).submit();
+        }
+    });
 });
 
-    function getPreparedAttrsHtml(index, element = null) {
+function getPreparedAttrsHtml(index, element = null) {
     return `
         <div class="attribute d-flex align-items-center mb-3">
             <div class="form-group col-md-5 pr-1">

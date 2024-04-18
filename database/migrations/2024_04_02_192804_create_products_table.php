@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('article')->unique();
-            $table->enum('status', ['available', 'unavailable'])->default('available');
+            $table->enum('status', ['available', 'unavailable']);
             $table->jsonb('data')->nullable();
             $table->timestamps();
             $table->softDeletes();

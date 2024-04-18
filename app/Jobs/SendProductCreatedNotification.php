@@ -15,7 +15,7 @@ class SendProductCreatedNotification implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $product;
+    protected Product $product;
 
     /**
      * Create a new job instance.
@@ -32,7 +32,7 @@ class SendProductCreatedNotification implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(): void
     {
         $email = config('products.email');
         Notification::route('mail', $email)->notify(new ProductCreatedNotification($this->product));
